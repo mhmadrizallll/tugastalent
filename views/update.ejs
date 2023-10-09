@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      input {
+        width: 100%;
+        height: 25px;
+        margin: 5px 0;
+      }
+
+      label {
+        margin-top: 10px;
+      }
+
+      #submit {
+        height: 40px;
+        background-color: #01db1e;
+        border: none;
+      }
+      #form {
+        padding: 50px 300px;
+      }
+    </style>
+  </head>
+  <body style="background-color: #d2fad7">
+    <div id="form">
+      <h1>Update Product</h1>
+      <form action="/product/edit/<%= product.id %>" method="post">
+        <div>
+          <label for="tag">Tag</label>
+          <input type="text" name="tag" id="tag" value="<%= product.tag %>" />
+        </div>
+        <div>
+          <label for="brand">Brand</label>
+          <input
+            type="text"
+            name="brand"
+            id="brand"
+            value="<%= product.brand %>"
+          />
+        </div>
+        <div>
+          <label for="image">Image</label>
+          <input
+            type="text"
+            name="image"
+            id="image"
+            value="<%= product.image %>"
+          />
+        </div>
+        <div>
+          <label for="stock">Stock</label>
+          <input
+            type="number"
+            name="stock"
+            id="stock"
+            value="<%= product.stock %>"
+          />
+        </div>
+        <div>
+          <label for="price">Price</label>
+          <input
+            type="number"
+            name="price"
+            id="price"
+            value="<%= product.price %>"
+          />
+        </div>
+        <input type="submit" id="submit" value="Update" />
+      </form>
+    </div>
+  </body>
+</html>
